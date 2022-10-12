@@ -7,14 +7,15 @@ import client
 
 
 class Test(unittest.TestCase):
-    # To test client.getRatio
+
+    # To test client.getRatio function
     def test_1(self):
         # need more test cases
         test_cases = [[2,4,0.5], [2,2,1], [1,4, 0.25]]
         for test_case in test_cases:
             self.assertEqual(client.getRatio(test_case[0], test_case[1]), test_case[2])
     
-    # to test client.getDataPoint
+    # to test client.getDataPoint function
     def test_2(self):
         # need more test cases
         test_cases = [
@@ -23,4 +24,7 @@ class Test(unittest.TestCase):
             ]
         for test_case in test_cases:
             self.assertEqual(client.getDataPoint(test_case[0]),  test_case[1])
-unittest.main()
+
+
+if __name__=="__main__":
+    unittest.main()
